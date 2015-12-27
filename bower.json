@@ -1,0 +1,26 @@
+{
+  "name": "persian-regs",
+  "description": "A collection of useful Persian / Farsi regular expressions",
+  "main": "dist/persianRegs.js",
+  "authors": [
+    "Iman Mohamadi <Iman@jsDecorator.com> (http://jsdecorator.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Persian",
+    "Farsi",
+    "Regular",
+    "Experssion",
+    "regexp",
+    "reg"
+  ],
+  "homepage": "https://github.com/ImanMh/persianRegs",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

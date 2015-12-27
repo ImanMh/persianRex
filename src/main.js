@@ -15,6 +15,9 @@
   persianRex.hasNumber = new RegExp(persianNumberRange);
   persianRex.hasLetter = new RegExp(persianCharRange);
   persianRex.hasText = new RegExp(combineRegExps(persianNumberRange, persianCharRange));
+  
+  persianRex.lettersASCIRange = persianCharRange;
+  persianRex.numbersASCIRange = persianNumberRange;
 
   function combineRegExps () {
 		var combined = '(';
@@ -40,6 +43,8 @@
     exports.hasNumber = persianRex.hasNumber;
     exports.hasLetter = persianRex.hasLetter;
     exports.hasText = persianRex.hasText;
+    exports.lettersASCIRange = persianCharRange;
+    exports.numbersASCIRange = persianNumberRange;
     
   } else {
     window.persianRex = persianRex;  

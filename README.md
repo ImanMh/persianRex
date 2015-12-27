@@ -2,3 +2,64 @@
  A minimal library of useful Persian / Farsi regular expressions for browser and NodeJS environment
 
  ![travis-ci](https://travis-ci.org/ImanMh/persianRex.svg)
+
+##Getting started
+You can download the latest release form the [release page](https://github.com/ImanMh/persianRex/releases) or use your preferred package manager.
+
+via npm 
+
+```npm install persian-rex```
+
+via bower
+
+```bower install persian-rex```
+
+Once downloaded you can include the dist file like this: 
+
+```html
+ <scirpt src="bower_components/persian-rex/dist/persian-rex.js"></script>
+```
+
+Or if you are using node:
+
+```js
+ var persianRex = require('persian-rex');
+```
+
+###Detecting Persian Numbers
+The ```number``` RegExp will match any string that only contains Persian numbers.
+```js
+ if (persianRex.number.test('۱۲۳'))
+  makeInputsRTL();
+```
+
+###Detecting Persian Letters
+The ```letter``` RegExp will match any string that only contains Persian letters.
+```js
+ if (persianRex.letter.test('ابپ'))
+  makeInputsRTL();
+```
+
+###Detecting Persian Text
+The ```text``` RegExp will match any string that only contains Persian letters or Persian numbers.
+```js
+ if (persianRex.letter.test('ابپ'))
+  makeInputsRTL();
+```
+
+###Using has prefix
+You can prefix any of thes above methods with has.
+
+```js
+ if (persianRex.hasNumber.test('ابپ۱۲۳۴۵۶123abc'))
+  makeInputsRTL();
+```
+
+The if condition is true, because the string has a persian number in it. You can use ```hasLetter``` and ```hasText``` as well.
+
+###Lower level usage
+You can also get the ASCI code ranges for Persian numbers and Persian letters to make your custom RegExps.
+```js
+  var customLettersRegular = new RegExp('^' + persianRex.lettersASCIRange);
+  var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);
+```

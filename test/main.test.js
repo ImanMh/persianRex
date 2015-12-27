@@ -160,4 +160,20 @@ describe('Main Unit Test Suite', function () {
     });
   });
   
+  describe('raw letter ASCI ranges', function () {
+    it('should be able to create custom RegExps', function () {
+      var customRex = new RegExp('^' + persianRex.lettersASCIRange);
+      assert.ok(customRex.test('ابپ123'));
+      assert.notOk(customRex.test('123ابپ'));
+    });
+  });
+  
+  describe('raw number ASCI ranges', function () {
+    it('should be able to create custom RegExps', function () {
+      var customRex = new RegExp('^' + persianRex.numbersASCIRange);
+      assert.ok(customRex.test('۱۲۳123'));
+      assert.notOk(customRex.test('123۱۲۳'));
+    });
+  });
+  
 });

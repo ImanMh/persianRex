@@ -1,7 +1,7 @@
 {
-  "name": "persian-regs",
+  "name": "persian-rex",
   "description": "A collection of useful Persian / Farsi regular expressions",
-  "main": "dist/persianRegs.js",
+  "main": "dist/persianRex.min.js",
   "authors": [
     "Iman Mohamadi <Iman@jsDecorator.com> (http://jsdecorator.com)"
   ],
@@ -14,7 +14,7 @@
     "regexp",
     "reg"
   ],
-  "homepage": "https://github.com/ImanMh/persianRegs",
+  "homepage": "https://github.com/ImanMh/persianRex",
   "moduleType": [],
   "ignore": [
     "**/.*",

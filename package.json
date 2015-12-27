@@ -1,10 +1,10 @@
 {
-  "name": "persian-regs",
+  "name": "persian-rex",
   "version": "1.0.0",
   "description": "A collection of useful Persian / Farsi regular expressions",
   "main": "dist/persianRegs.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "testem"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/ImanMh/persianRegs/issues"
   },
-  "homepage": "https://github.com/ImanMh/persianRegs#readme"
+  "homepage": "https://github.com/ImanMh/persianRegs#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
 }

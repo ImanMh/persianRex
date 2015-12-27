@@ -2,7 +2,7 @@
 if (typeof window === 'undefined') {
   // We are in node. Require modules.
   assert = require('chai').assert;
-  persianRex = require('../src/main');
+  persianRex = require('../dist/main');
   isBrowser = false;
 } else {
   // We are in the browser. Set up variables like above using served js files.

@@ -2,7 +2,7 @@
   "framework": "mocha",
   "src_files": [
     "node_modules/chai/chai.js",
-    "src/main.js",
+    "dist/main.js",
     "test/setup.js",
     "test/*.test.js"
   ],

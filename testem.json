@@ -14,5 +14,6 @@
   },
   "launch_in_dev": [
     "node"
-  ]
+  ],
+  "ignore_missing_launchers": true
 }

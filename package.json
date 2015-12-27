@@ -26,6 +26,8 @@
   "homepage": "https://github.com/ImanMh/persianRegs#readme",
   "devDependencies": {
     "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "gulp-uglifyjs": "^0.6.2",
     "mocha": "^2.3.4",
     "testem": "^0.9.11"
   }

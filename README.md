@@ -3,6 +3,9 @@
 
  ![travis-ci](https://travis-ci.org/ImanMh/persianRex.svg)
 
+##Places that you can use persianRex
+<img src="http://www.themeyab.com/img/blog/github-persianRex.jpg" alt="persianRex features"/>
+
 ##Getting started
 You can download the latest release form the [release page](https://github.com/ImanMh/persianRex/releases) or use your preferred package manager.
 

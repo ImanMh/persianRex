@@ -1,6 +1,4 @@
 language: node_js
-addons:
-  firefox: "43.0.3"
 node_js:
   - '0.10'
   - '0.12'

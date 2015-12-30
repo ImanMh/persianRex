@@ -4,7 +4,7 @@
   "description": "A collection of useful Persian / Farsi regular expressions",
   "main": "dist/persianRegs.js",
   "scripts": {
-    "test": "testem ci --launch node,PhantomJS"
+    "test": "testem ci --launch node,PhantomJS,firefox"
   },
   "repository": {
     "type": "git",

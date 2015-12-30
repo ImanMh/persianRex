@@ -67,7 +67,7 @@ You can also get the ASCI code ranges for Persian numbers and Persian letters to
   var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);
 ```
 
-#Sponsers
+#Sponsors
 Many of regular expressions in this project is extracted from larger projects such as [Themeyab.com](http://themeyab.com),
 If you think I'm are missing an important regular expression, feel free to open an issue on this repository and I will include it in the next version.
 

@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 .DS_Store
 .idea
 
+=======
+#mac files
+.DS_Store
+
+#ides
+.idea
+
+#common
+>>>>>>> origin/gh-pages
 bower_components
 node_modules

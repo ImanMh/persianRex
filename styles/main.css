@@ -30,6 +30,7 @@ strong {
 	border-bottom: 1px solid #aaa;
 	margin-bottom: 100px;
 	min-height: 500px;
+  background-color: #A83733;
 	background-image: url("../imgs/carpet-dim.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;

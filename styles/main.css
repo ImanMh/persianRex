@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+
+@font-face {
+  font-family: 'Cutive Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cutive Mono'), local('CutiveMono-Regular'), url(https://fonts.gstatic.com/s/cutivemono/v4/N5odNRruTwjvCM8y77PhQYgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+}
+
+body { 
+	font: 400 16px/1.5 "Cutive Mono", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif; 
+	color: #111; 
+	background-color: #fff; 
+	padding-bottom: 500px;
+}
+
+.banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-bottom: 1px solid #aaa;
+	margin-bottom: 100px;
+	min-height: 500px;
+	background-image: url("/imgs/carpet-dim.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.text-strong  h1 {
+	color: #fff;
+  font-size: 6em;
+  font-family: "Times New Roman";
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+}
+
+.text-strong i {
+	color: #fff;
+}
+
+.tester {
+	width: 100%;
+  min-height: 300px;
+  background-color: #F1F1F1;
+  border: none;
+  resize: none;
+  font-family: tahoma, arial;
+  outline: none;
+  text-align: right;
+  direction: rtl;
+  padding: 10px 15px;
+  font-size: 15px;
+}

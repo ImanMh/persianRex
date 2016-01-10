@@ -64,13 +64,16 @@ strong {
   padding: 10px 15px;
   font-size: 15px;
 	border-radius: 3px;
+  transition: background-color 300ms;
 }
 
 .tester.passed {
+  transition: background-color 300ms;
 	background-color: #DEFFDE;
 }
 
 .tester.failed {
+  transition: background-color 300ms;
 	background-color: #FFDEDE;
 }
 

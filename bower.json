@@ -1,4 +1,23 @@
 {
+<<<<<<< HEAD
+  "name": "persian-rex",
+  "description": "A collection of useful Persian / Farsi regular expressions",
+  "main": "dist/persianRex.min.js",
+  "authors": [
+    "Iman Mohamadi <Iman@jsDecorator.com> (http://jsdecorator.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Persian",
+    "Farsi",
+    "Regular",
+    "Experssion",
+    "regexp",
+    "reg"
+  ],
+  "homepage": "https://github.com/ImanMh/persianRex",
+  "moduleType": [],
+=======
   "name": "persianRex",
   "homepage": "https://github.com/ImanMh/persianRex",
   "authors": [
@@ -9,16 +28,21 @@
   "moduleType": [],
   "license": "MIT",
   "private": true,
+>>>>>>> origin/gh-pages
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
+<<<<<<< HEAD
+  ]
+=======
   ],
   "dependencies": {
     "bootstrap": "~3.3.6",
     "jquery": "~2.2.0",
     "prism": "~1.3.0"
   }
+>>>>>>> origin/gh-pages
 }

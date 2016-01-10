@@ -27,6 +27,11 @@ body {
 	background-size: cover;
 }
 
+.banner .stars {
+	width: 90px;
+	margin-top: 20px;
+}
+
 .text-strong  h1 {
 	color: #fff;
   font-size: 6em;

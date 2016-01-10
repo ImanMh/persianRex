@@ -11,11 +11,11 @@ You can download the latest release form the [release page](https://github.com/I
 
 via npm 
 
-```npm install persian-rex```
+```npm install persian-rex --save```
 
 via bower
 
-```bower install persian-rex```
+```bower install persian-rex --save```
 
 Once downloaded you can include the dist file like this: 
 

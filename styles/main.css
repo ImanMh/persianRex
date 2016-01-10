@@ -11,7 +11,15 @@ body {
 	font: 400 16px/1.5 "Cutive Mono", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif; 
 	color: #111; 
 	background-color: #fff; 
-	padding-bottom: 500px;
+	padding-bottom: 100px;
+}
+
+a {
+	text-decoration: underline;
+}
+
+strong {
+	font-weight: bold;
 }
 
 .banner {
@@ -55,4 +63,22 @@ body {
   direction: rtl;
   padding: 10px 15px;
   font-size: 15px;
+	border-radius: 3px;
+}
+
+.tester.passed {
+	background-color: #DEFFDE;
+}
+
+.tester.failed {
+	background-color: #FFDEDE;
+}
+
+.container .demo-code {
+	width: 100%;
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 20px 0;
+	margin-top: 5px;
+	border-radius: 2px;
 }

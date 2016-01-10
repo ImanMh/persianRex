@@ -5,6 +5,7 @@
   <title>Persian Rex - A collection of useful Persian regular expressions</title>
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/bower_components/prism/themes/prism.css">
 </head>
 <body>
 
@@ -27,8 +28,65 @@
         <textarea class="tester" name="farsi-detector"></textarea>
       </div>
     </div>
-    <p class="test">When you start typing, if all the letters and numbres are in Persian, the box will turn be green. As soon as you type the first none Persian character it will turn red. If you found a Persian letter that the box above can not recognize, please feel free to open up an issue on our <a href="https://github.com/ImanMh/persianRex/issues">repository</a>.</p>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <p class="test">When you start typing, if all the letters and numbres are in Persian, the box will turn be green. As soon as you type the first none Persian character it will turn red. If you found a Persian letter that the box above can not recognize, please feel free to open up an issue on our <a href="https://github.com/ImanMh/persianRex/issues">repository</a>.</p>
+        
+        <h2>Getting started</h2>
+        <p>You can download the latest release form the <a href="https://github.com/ImanMh/persianRex/releases">releases</a> page or use your preferred package manager.</p>
+        <strong>via npm:</strong><br>
+        <code class="demo-code">npm install persian-rex</code><br>
+        <strong>via bower:</strong>
+        <br>
+        <code class="demo-code">bower install persian-rex</code><br>
+        <span>Once downloaded you can include the dist file like this: </span>
+        <code class="demo-code language-markup">&lt;scirpt src=&quot;bower_components/persian-rex/dist/persian-rex.js&quot;&gt;&lt;/script&gt;</code><br>
+        
+        <strong>Or if you are using node:</strong>
+        <code class="demo-code language-js">var persianRex = require('persian-rex');</code>
+        
+        <h2>Detecting Persian Numbers</h2>
+        <span>The <code>number</code> RegExp will match any string that only contains Persian numbers.</span>
+        <code class="demo-code language-js">if (persianRex.number.test('۱۲۳'))
+    makeInputsRTL();</code>
+        
+        <h2>Detecting Persian Letters</h2>
+        <span>The <code>letter</code> RegExp will match any string that only contains Persian letters.</span>
+        <code class="demo-code language-js">if (persianRex.letter.test('ابپ'))
+    makeInputsRTL();</code>
+  
+        <h2>Detecting Persian Text</h2>
+        <span>The <code>text</code> RegExp will match any string that only contains Persian letters or Persian numbers.</span>
+        <code class="demo-code language-js">if (persianRex.text.test('ابپ۱۲۳'))
+    makeInputsRTL();</code>
+    
+        <h2>Using has prefix</h2>
+        <span>You can prefix any of the above methods with has.</span>
+        <code class="demo-code language-js">if (persianRex.hasNumber.test('ابپ۱۲۳۴۵۶123abc'))
+    makeInputsRTL();</code>
+        <p>The if condition is true, because the string has a persian number in it. You can use hasLetter and hasText as well.</p>
+  
+        <h2>Lower level usage</h2>
+        <span>You can also get the ASCI code ranges for Persian numbers and Persian letters to make your custom RegExps.</span>
+        <code class="demo-code language-js">var customLettersRegular = new RegExp('^' + persianRex.lettersASCIRange);
+var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);</code>
+        
+        <h2>Sponsors</h2>
+        <p>Many of regular expressions in this project is extracted from larger projects such as <a href="http://themeyab.com/" target="_blank">Themeyab.com</a>, If you think I'm are missing an important regular expression, feel free to open an issue on this repository and I will include it in the next version.</p>
+        
+        <a href="http://themeyab.com/" target="_blank">
+          <img src="https://camo.githubusercontent.com/7b63ab2ccee2c2c76d180eeb4258b606a013ebae/687474703a2f2f7777772e7468656d657961622e636f6d2f696d672f7468656d657961622d6c6f676f2e706e67" alt="themeyab logo">
+        </a>
+        
+      </div>
+    </div>
+  
   </div>
   
+  <script src="bower_components/prism/components/prism-core.js"></script>
+  <script src="bower_components/prism/components/prism-markup.min.js"></script>
+  <script src="bower_components/prism/components/prism-clike.js"></script>
+  <script src="bower_components/prism/components/prism-javascript.min.js"></script>
 </body>
 </html>

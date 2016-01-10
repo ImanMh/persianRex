@@ -1,0 +1,9 @@
+#mac files
+.DS_Store
+
+#ides
+.idea
+
+#common
+bower_components
+node_modules

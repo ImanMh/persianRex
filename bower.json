@@ -1,0 +1,23 @@
+{
+  "name": "persianRex",
+  "homepage": "https://github.com/ImanMh/persianRex",
+  "authors": [
+    "Iman Mohamadi <iman.mohamadi.dev@gmail.com>"
+  ],
+  "description": "A collection of useful Persian regular experssions",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0"
+  }
+}

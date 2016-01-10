@@ -84,7 +84,9 @@ strong {
 }
 
 .farsi {
-	text-align: right;
-	direction: rtl;
-	font-family: tahoma, arial;
+  text-align: right;
+  direction: rtl;
+  font-family: tahoma, arial;
+  color: #333;
+  font-size: 0.9em;
 }

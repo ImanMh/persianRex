@@ -21,6 +21,13 @@
   </div>
 
   <div class="container">
+    <h2>A few words with Persian users of this library</h2>
+    <p class="farsi">
+      تشخیص کلمات و حروف فارسی یک سایت کار ساده ای به نظر میاد. کافیه کلیه حروف فارسی رو از الف تا ی بنویسیم و از روش یک Regular Expression بسازیم. راستی همزه تنها یادتون نره. و آی کلاه دار. و همزه روی پایه، فکر کنم بد نباشه همزه روی الف رو هم بنویسیم. خوبه به نظر میاد همه چیز رو نوشتیم. اما یه مشکل دیگه! توی سیستم عامل ویندوز اعداد به صورت پیش فرض انگلیسی هستند ولی توی سیستم عامل مکینتاش اعداد به صورت فارسی تایپ میشن. حالا سیستم عامل هایی مثل ابونتو،‌ اندروید،‌ آی او اس و … رو هم بهش اضافه کنید. به نظر کار وقت گیری میاد. چند وقت پیش که روی تم یاب کار می کردم به مورد مشابهی برخورد کردم. اون موقع وقت زیادی از من گرفته شد تا تونستم این مشکل رو حل کنم. بعد از اون همه دردسر با علی آجودانیان صحبت کردم و هر دو تصمیم گرفتیم که نتیجه کارمون رو روی گیت هاب در اختیار همه برنامه نویس ها بگذاریم. این شد که کتابخانه PersianRex که مجموعه ای از Regular Expression ها برای تشخیص حروف فارسی در مرورگر و محیط جاوااسکریپت تحت سرور هست رو نوشتیم. نسخه اولیه این کتابخانه در تاریخ ۷ دی ۱۳۹۴ انتشار پیدا کرد.
+شما می تونید با استفاده از صفحه دموی این کتابخانه حروف کیبورد خودتون رو تست کنید. اگر حرفی پیدا کردید که در این کتابخانه وجود نداشت یک issue در همین ریپازیتوری برای ما باز کنید و حرف یا حروفی که به اشتباه فارسی تشخیص داده نشدند رو برای ما بفرستید(با ذکر یک نمونه کلمه فارسی یا عربی مورد استفاده در زبان فارسی شامل اون حرف) و ما در نسخه جدید این لایبرری اون رو خواهیم گنجوند و پروژه شما رو در لیست اسپانسر ها قرار خواهیم داد. 
+
+شما مختارید که از این کتابخانه به هر شکلی که دوست دارید استفاده کنید و هر شکلی خواستید کد های این کتابخانه رو به فروش برسونید. 
+    </p>
     
     <h2>Start Typing Persian in the box below</h2>
     <div class="row">
@@ -31,15 +38,15 @@
     
     <div class="row">
       <div class="col-md-12">
-        <p class="test">When you start typing, if all the letters and numbres are in Persian, the box will turn be green. As soon as you type the first none Persian character it will turn red. If you found a Persian letter that the box above can not recognize, please feel free to open up an issue on our <a href="https://github.com/ImanMh/persianRex/issues">repository</a>.</p>
+        <p class="test">When you start typing, if all the letters and numbres are in Persian, the box background turn to green. As soon as you type the first none Persian character it will turn red. If you found a Persian letter that the box above can not recognize, please feel free to open up an issue on our <a href="https://github.com/ImanMh/persianRex/issues">repository</a>.</p>
         
         <h2>Getting started</h2>
-        <p>You can download the latest release form the <a href="https://github.com/ImanMh/persianRex/releases">releases</a> page or use your preferred package manager.</p>
+        <p>You can download the latest release from the <a href="https://github.com/ImanMh/persianRex/releases">releases</a> page or use your preferred package manager.</p>
         <strong>via npm:</strong><br>
-        <code class="demo-code">npm install persian-rex</code><br>
+        <code class="demo-code">npm install persian-rex --save</code><br>
         <strong>via bower:</strong>
         <br>
-        <code class="demo-code">bower install persian-rex</code><br>
+        <code class="demo-code">bower install persian-rex --save</code><br>
         <span>Once downloaded you can include the dist file like this: </span>
         <code class="demo-code language-markup">&lt;scirpt src=&quot;bower_components/persian-rex/dist/persian-rex.js&quot;&gt;&lt;/script&gt;</code><br>
         
@@ -65,7 +72,7 @@
         <span>You can prefix any of the above methods with has.</span>
         <code class="demo-code language-js">if (persianRex.hasNumber.test('ابپ۱۲۳۴۵۶123abc'))
     makeInputsRTL();</code>
-        <p>The if condition is true, because the string has a persian number in it. You can use hasLetter and hasText as well.</p>
+        <p>The if condition is true, because the string has a persian number in it. You can use <code>hasLetter</code> and <code>hasText</code> as well.</p>
   
         <h2>Lower level usage</h2>
         <span>You can also get the ASCI code ranges for Persian numbers and Persian letters to make your custom RegExps.</span>
@@ -73,7 +80,7 @@
 var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);</code>
         
         <h2>Sponsors</h2>
-        <p>Many of regular expressions in this project is extracted from larger projects such as <a href="http://themeyab.com/" target="_blank">Themeyab.com</a>, If you think I'm are missing an important regular expression, feel free to open an issue on this repository and I will include it in the next version.</p>
+        <p>Many of the regular expressions in this project is extracted from larger projects such as <a href="http://themeyab.com/" target="_blank">Themeyab.com</a>, If you think I'm are missing an important regular expression, feel free to open an <a href="https://github.com/ImanMh/persianRex/issues">issue</a> on this repository and I will include it in the next version.</p>
         
         <a href="http://themeyab.com/" target="_blank">
           <img src="https://camo.githubusercontent.com/7b63ab2ccee2c2c76d180eeb4258b606a013ebae/687474703a2f2f7777772e7468656d657961622e636f6d2f696d672f7468656d657961622d6c6f676f2e706e67" alt="themeyab logo">

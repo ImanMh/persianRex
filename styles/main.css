@@ -82,3 +82,9 @@ strong {
 	margin-top: 5px;
 	border-radius: 2px;
 }
+
+.farsi {
+	text-align: right;
+	direction: rtl;
+	font-family: tahoma, arial;
+}

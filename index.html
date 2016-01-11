@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta property="og:image" content="http://imanmh.github.io/persianRex/imgs/og.png" />
   <title>Persian Rex - A collection of useful Persian regular expressions</title>
   <link rel="stylesheet" href="libs/bootstrap.min.css">
   <link rel="stylesheet" href="styles/main.css">
@@ -32,7 +33,7 @@
     <h2>Start Typing Persian in the box below</h2>
     <div class="row">
       <div class="col-md-12">
-        <textarea class="tester" name="farsi-detector" placeholder="حروف فارسی را در این جا تست کنید..."></textarea>
+        <textarea id="tester" class="tester" name="farsi-detector" placeholder="حروف فارسی را در این جا تست کنید..."></textarea>
       </div>
     </div>
     
@@ -90,10 +91,10 @@ var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);</code>
     </div>
   
   </div>
- 
-  <script src="js/jquery.js"></script> 
-  <script src="js/persianRex.js"></script> 
-  <script src="js/script.js"></script> 
+  
+  <script src="libs/jquery.js"></script>
+  <script src="libs/persianRex.js"></script>
+  <script src="libs/tester.js"></script>
   <script src="libs/prism-core.min.js"></script>
   <script src="libs/prism-markup.min.js"></script>
   <script src="libs/prism-clike.min.js"></script>

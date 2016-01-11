@@ -1,6 +1,6 @@
 {
   "name": "persian-rex",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "A collection of useful Persian / Farsi regular expressions",
   "main": "dist/persianRegs.js",
   "scripts": {
@@ -27,6 +27,7 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
     "gulp-uglifyjs": "^0.6.2",
     "mocha": "^2.3.4",
     "testem": "^0.9.11"

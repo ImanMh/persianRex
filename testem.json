@@ -2,7 +2,7 @@
   "framework": "mocha",
   "src_files": [
     "node_modules/chai/chai.js",
-    "dist/main.js",
+    "dist/persian-rex.js",
     "test/setup.js",
     "test/*.test.js"
   ],

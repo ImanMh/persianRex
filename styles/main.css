@@ -101,6 +101,10 @@ code {
   font-size: 0.9em;
 }
 
+.en {
+  font: 600 16px/1.5 "Cutive Mono", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif; 
+}
+
 /*Prism overwrites*/
 .container code[class*="language-"], code {
   background-color: #F4F6F7;
@@ -108,4 +112,8 @@ code {
 
 .sponsor img {
   max-width: 100%;
+}
+
+.justified {
+  text-align: justify;
 }

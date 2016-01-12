@@ -22,6 +22,11 @@ strong {
 	font-weight: bold;
 }
 
+code {
+  max-width: 100%;
+  overflow: scroll;
+}
+
 .banner {
 	display: flex;
 	justify-content: center;
@@ -99,4 +104,8 @@ strong {
 /*Prism overwrites*/
 .container code[class*="language-"], code {
   background-color: #F4F6F7;
+}
+
+.sponsor img {
+  max-width: 100%;
 }

@@ -46,6 +46,10 @@ code {
 	margin-top: 20px;
 }
 
+.banner-content {
+  max-width: 90%;  
+}
+
 .text-strong  h1 {
 	color: #fff;
   font-size: 6em;

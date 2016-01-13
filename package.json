@@ -29,6 +29,7 @@
     "gulp": "^3.9.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglifyjs": "^0.6.2",
+    "gulp-watch": "^4.3.5",
     "mocha": "^2.3.4",
     "testem": "^0.9.11"
   }

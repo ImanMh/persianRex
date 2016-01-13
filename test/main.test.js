@@ -103,26 +103,27 @@ describe('Main Unit Test Suite', function () {
   
   describe('punctuation marks', function () {
       it('single punctuation marks', function () {
-        assert.ok(persianRex.punctuation.test('.'));
+        // assert.ok(persianRex.punctuation.test('.'));
         assert.ok(persianRex.punctuation.test('،'));
-        assert.ok(persianRex.punctuation.test(':'));
+        // assert.ok(persianRex.punctuation.test(':'));
         assert.ok(persianRex.punctuation.test('؟'));
-        assert.ok(persianRex.punctuation.test('!'));
+        // assert.ok(persianRex.punctuation.test('!'));
         assert.ok(persianRex.punctuation.test('«'));
         assert.ok(persianRex.punctuation.test('»'));
         assert.ok(persianRex.punctuation.test('؛'));
-        assert.ok(persianRex.punctuation.test('-'));
-        assert.ok(persianRex.punctuation.test('['));
-        assert.ok(persianRex.punctuation.test(']'));
-        assert.ok(persianRex.punctuation.test('('));
-        assert.ok(persianRex.punctuation.test(')'));
-        assert.ok(persianRex.punctuation.test('/'));
+        // assert.ok(persianRex.punctuation.test('-'));
+        // assert.ok(persianRex.punctuation.test('['));
+        // assert.ok(persianRex.punctuation.test(']'));
+        // assert.ok(persianRex.punctuation.test('('));
+        // assert.ok(persianRex.punctuation.test(')'));
+        // assert.ok(persianRex.punctuation.test('/'));
       });
 
       it('multi punctuation marks', function () {
-        assert.ok(persianRex.punctuation.test('.،:؟-!«»؛[]()/'));
-        assert.ok(persianRex.punctuation.test('......'));
-        assert.ok(persianRex.punctuation.test('!!!!!'));
+        // assert.ok(persianRex.punctuation.test('.،:؟-!«»؛[]()/'));
+        assert.ok(persianRex.punctuation.test('،؟«»؛'));
+        assert.ok(persianRex.punctuation.test('،،،،،'));
+        // assert.ok(persianRex.punctuation.test('!!!!!'));
       });
       
       it('should not accept numbers or letters', function () {
@@ -135,19 +136,19 @@ describe('Main Unit Test Suite', function () {
     it('should pass a single letter or number or punctuation', function () {
       assert.ok(persianRex.text.test('۱'));
       assert.ok(persianRex.text.test('ا'));
-      assert.ok(persianRex.text.test('('));
+      assert.ok(persianRex.text.test('؟'));
     });    
 
     it('should pass multi letter or number or punctuation', function () {
       assert.ok(persianRex.text.test('۱۲۳'));
       assert.ok(persianRex.text.test('ابپ'));
-      assert.ok(persianRex.text.test('()'));
+      assert.ok(persianRex.text.test('؟؟'));
     });    
     
     it('should pass mixture of multi letter and number and punctuation', function () {
       assert.ok(persianRex.text.test('۱ا'));
       assert.ok(persianRex.text.test('ا۱۲۱۲۲ب۳پ'));
-      assert.ok(persianRex.text.test('ا۱[]()۲۱۲۲ب۳پ'));
+      assert.ok(persianRex.text.test('ا۱؟؟۲۱۲۲ب۳پ'));
     });    
         
     it('should not pass if contains no persian letter or number', function () {
@@ -179,9 +180,9 @@ describe('Main Unit Test Suite', function () {
   
   describe('hasPunctuation', function () {
       it('should pass if contains a persian punctuation', function () {
-          assert.ok(persianRex.hasPunctuation.test('[1'));
-          assert.ok(persianRex.hasPunctuation.test('1]'));
-          assert.ok(persianRex.hasPunctuation.test('شسی(بلا'));
+          assert.ok(persianRex.hasPunctuation.test('؟1'));
+          assert.ok(persianRex.hasPunctuation.test('؟1'));
+          assert.ok(persianRex.hasPunctuation.test('شسی؟بلا'));
       });
   });
   
@@ -198,8 +199,8 @@ describe('Main Unit Test Suite', function () {
       assert.ok(persianRex.hasText.test('1ا1'));
       assert.ok(persianRex.hasText.test('aaاaaa'));
       assert.ok(persianRex.hasText.test('aاaاaاa'));
-      assert.ok(persianRex.hasText.test('()'));
-      assert.ok(persianRex.hasText.test('a(a(a(a'));
+      assert.ok(persianRex.hasText.test('؟؟'));
+      assert.ok(persianRex.hasText.test('a؟a؟a؟a'));
     });
   });
   
@@ -222,8 +223,8 @@ describe('Main Unit Test Suite', function () {
   describe('raw punctuation ASCI ranges', function () {
     it('should be able to create custom RegExps', function () {
       var customRex = new RegExp('^' + persianRex.punctuationsASCIRange);
-      assert.ok(customRex.test('[]۱۲۳123'));
-      assert.notOk(customRex.test('123۱۲۳[]'));
+      assert.ok(customRex.test('؟۱۲۳123'));
+      assert.notOk(customRex.test('123۱۲۳؟؟'));
     });
   });
   

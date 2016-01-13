@@ -44,9 +44,16 @@ The ```letter``` RegExp will match any string that only contains Persian letters
 ```
 
 ###Detecting Persian Text
-The ```text``` RegExp will match any string that only contains Persian letters or Persian numbers.
+The ```text``` RegExp will match any string that only contains Persian letters, Persian numbers or Persian punctuations.
 ```js
- if (persianRex.text.test('ابپ۱۲۳'))
+ if (persianRex.text.test('ابپ۱؟ )()۲۳'))
+  makeInputsRTL();
+```
+
+###Punctuations
+Since version ```1.3.0``` punctuations are added to the library and they are combined with the ```text``` method to create a more natural detection of Persian text. It's rare that anybody wants to test a string against Persian punctuation but we decided to expose is for our users. Here is how to use it: 
+```js
+ if (persianRex.punctuation.test('،؟«»؛'))
   makeInputsRTL();
 ```
 

@@ -7,7 +7,7 @@
 				'\u063A\u064A\u064B\u064C\u064D\u064E',
 				'\u064F\u067E\u0670\u0686\u0698\u200C',
 				'\u0621-\u0629\u0630-\u0639\u0641-\u0654]'].join(),
-      punctuationRange = '(\\.|،|:|؟|\\!|«|»|؛|\\-|\\[|\\]|\\(|\\)|\\/)';
+      punctuationRange = '(،|؟|«|»|؛)';
   
   persianRex.number = new RegExp('^' + numberRange + '+$');
   persianRex.letter = new RegExp('^' + charRange + '+$');

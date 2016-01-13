@@ -1,5 +1,10 @@
+#IDE and OS
 .DS_Store
 .idea
 
+#project folders
 bower_components
 node_modules
+
+#tools
+npm-debug.log

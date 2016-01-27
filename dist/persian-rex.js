@@ -7,21 +7,23 @@
 				'\u063A\u064A\u064B\u064C\u064D\u064E',
 				'\u064F\u067E\u0670\u0686\u0698\u200C',
 				'\u0621-\u0629\u0630-\u0639\u0641-\u0654]'].join(),
-      punctuationRange = '(،|؟|«|»|؛)';
+      rtlPunctuations = '(،|؟|«|»|؛)';
   
   persianRex.number = new RegExp('^' + numberRange + '+$');
   persianRex.letter = new RegExp('^' + charRange + '+$');
-  persianRex.punctuation = new RegExp('^' + punctuationRange + '+$');
-  persianRex.text = new RegExp('^' + combineRegExps(numberRange, charRange, punctuationRange) + '+$');
+  persianRex.punctuation = new RegExp('^' + rtlPunctuations + '+$');
+  persianRex.text = new RegExp('^' + combineRegExps(numberRange, charRange, rtlPunctuations) + '+$');
+  persianRex.rtl = new RegExp('^' + combineRegExps(charRange, numberRange, rtlPunctuations) + '+$');
   
   persianRex.hasNumber = new RegExp(numberRange);
   persianRex.hasLetter = new RegExp(charRange);
-  persianRex.hasPunctuation = new RegExp(punctuationRange);
-  persianRex.hasText = new RegExp(combineRegExps(numberRange, charRange, punctuationRange));
+  persianRex.hasPunctuation = new RegExp(rtlPunctuations);
+  persianRex.hasText = new RegExp(combineRegExps(numberRange, charRange, rtlPunctuations));
+  persianRex.hasRtl = new RegExp(combineRegExps(numberRange, charRange, rtlPunctuations));
   
   persianRex.numbersASCIRange = numberRange;
   persianRex.lettersASCIRange = charRange;
-  persianRex.punctuationsASCIRange = punctuationRange;
+  persianRex.punctuationsASCIRange = rtlPunctuations;
 
   function combineRegExps () {
 		var combined = '(';
@@ -51,7 +53,9 @@
     exports.hasText = persianRex.hasText;
     exports.lettersASCIRange = charRange;
     exports.numbersASCIRange = numberRange;
-    exports.punctuationsASCIRange = punctuationRange;
+    exports.punctuationsASCIRange = rtlPunctuations;
+    exports.rtl = persianRex.rtl;
+    exports.hasRtl = persianRex.hasRtl;
   } else {
     window.persianRex = persianRex;  
   }

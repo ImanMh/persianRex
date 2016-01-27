@@ -1,5 +1,4 @@
-describe('Main Unit Test Suite', function () {
-
+describe('Test ENV', function () {
   describe('check test suite is working', function () {
     it ('should pass anyway', function (done) {
       assert.ok(true);
@@ -12,6 +11,95 @@ describe('Main Unit Test Suite', function () {
       assert.ok(typeof persianRex.letter !== 'undefined');
     });
   });
+});
+
+describe('RTL', function () {
+
+  describe('letters', function () {
+    it('should consider all Persian letters rtl', function () {
+      assert.ok(persianRex.letter.test('ا'));
+      assert.ok(persianRex.letter.test('ب'));
+      assert.ok(persianRex.letter.test('پ'));
+      assert.ok(persianRex.letter.test('ت'));
+      assert.ok(persianRex.letter.test('ث'));
+      assert.ok(persianRex.letter.test('ج'));
+      assert.ok(persianRex.letter.test('چ'));
+      assert.ok(persianRex.letter.test('ح'));
+      assert.ok(persianRex.letter.test('خ'));
+      assert.ok(persianRex.letter.test('د'));
+      assert.ok(persianRex.letter.test('ذ'));
+      assert.ok(persianRex.letter.test('ر'));
+      assert.ok(persianRex.letter.test('ز'));
+      assert.ok(persianRex.letter.test('س'));
+      assert.ok(persianRex.letter.test('ش'));
+      assert.ok(persianRex.letter.test('ص'));
+      assert.ok(persianRex.letter.test('ض'));
+      assert.ok(persianRex.letter.test('ط'));
+      assert.ok(persianRex.letter.test('ظ'));
+      assert.ok(persianRex.letter.test('ع'));
+      assert.ok(persianRex.letter.test('غ'));
+      assert.ok(persianRex.letter.test('ف'));
+      assert.ok(persianRex.letter.test('ق'));
+      assert.ok(persianRex.letter.test('ک'));
+      assert.ok(persianRex.letter.test('گ'));
+      assert.ok(persianRex.letter.test('ل'));
+      assert.ok(persianRex.letter.test('م'));
+      assert.ok(persianRex.letter.test('ن'));
+      assert.ok(persianRex.letter.test('و'));
+      assert.ok(persianRex.letter.test('ه'));
+      assert.ok(persianRex.letter.test('ی'));
+    });
+  });
+
+  describe('numbers', function () {
+    it('should consider all Persian numbers rtl', function () {
+      assert.ok(persianRex.rtl.test('۰'));
+      assert.ok(persianRex.rtl.test('۱'));
+      assert.ok(persianRex.rtl.test('۲'));
+      assert.ok(persianRex.rtl.test('۳'));
+      assert.ok(persianRex.rtl.test('۴'));
+      assert.ok(persianRex.rtl.test('۵'));
+      assert.ok(persianRex.rtl.test('۶'));
+      assert.ok(persianRex.rtl.test('۷'));
+      assert.ok(persianRex.rtl.test('۸'));
+      assert.ok(persianRex.rtl.test('۹'));
+    });
+  });
+  
+  describe('punctuations', function () {
+    it('should consider all Persian only punctuations rtl', function () {
+      assert.ok(persianRex.rtl.test('،'));
+      assert.ok(persianRex.rtl.test('؟'));
+      assert.ok(persianRex.rtl.test('«'));
+      assert.ok(persianRex.rtl.test('»'));
+      assert.ok(persianRex.rtl.test('؛'));        
+    });
+  });
+  
+  describe('mixture of letter number and rtl punctuations', function () {
+    it('should consider the mixture as rtl', function () {
+      assert.ok(persianRex.rtl.test('؛۹ی'));        
+    });
+  });
+  
+  describe('hasRtl', function () {
+    it('should consider rtl if a only rtl chars are passed', function () {
+      assert.ok(persianRex.hasRtl.test('ی'));
+      assert.ok(persianRex.hasRtl.test('۹'));
+      assert.ok(persianRex.hasRtl.test('؛'));
+      assert.ok(persianRex.rtl.test('؛۹ی'));        
+    });
+
+    it('should consider rtl if a sinlge rtl char is in string', function () {
+      assert.ok(persianRex.hasRtl.test('aaیaa'));
+      assert.ok(persianRex.hasRtl.test('a۹a'));
+      assert.ok(persianRex.hasRtl.test('؛a'));
+      assert.ok(persianRex.hasRtl.test('a؛۹ی'));        
+    });
+  });
+});
+
+describe('Persian', function () {
   
   describe('number', function () {
     it('single digit numbers', function () {

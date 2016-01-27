@@ -69,6 +69,7 @@ describe('RTL', function () {
   describe('punctuations', function () {
     it('should consider all Persian only punctuations rtl', function () {
       assert.ok(persianRex.rtl.test('،'));
+      assert.ok(persianRex.rtl.test('٬'));
       assert.ok(persianRex.rtl.test('؟'));
       assert.ok(persianRex.rtl.test('«'));
       assert.ok(persianRex.rtl.test('»'));

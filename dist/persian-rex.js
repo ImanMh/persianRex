@@ -1,3 +1,5 @@
+/* persian-rex v2.0.0 by Iman Mohamadi <Iman@jsDecorator.com> (http://jsdecorator.com) */
+
 (function () {
   persianRex = {};
   

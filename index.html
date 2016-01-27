@@ -67,8 +67,21 @@
         <h2>Detecting Persian Text</h2>
         <span>The <code>text</code> RegExp will match any string that only contains Persian letters or Persian numbers.</span>
         <code class="demo-code language-js">if (persianRex.text.test('ابپ۱۲۳'))
-    makeInputsRTL();</code>
+    doSomething();</code>
+
+        <h2>Detecting RTL characters</h2>
+        <span>From version 2 of this library, <code>rtl</code>  RegExp is added to give you the ability to detect if tested string contains only rtl characters or not. rtl characters are Persian letters, Persian numbers and only the punctuations that are rtl (not [] or / that are also used in English). This is added so that you can be absolutely sure that you are dealing with a rtl text. Here is the example:</span>
+        <code class="demo-code language-js">  if (persianRex.rtl.test('،'))
+  doSomething();
+
+  if (persianRex.rtl.test('!'))
+    doSomething(); //this line will not be executed</code>
     
+      <h2>Punctuations</h2>
+      <span>Since version <code>1.3.0</code> punctuations are added to the library and they are combined with the text method to create a more natural detection of Persian text. It's rare that anybody wants to test a string against Persian punctuation but we decided to expose is for our users. Here is how to use it:</span>
+      <code class="demo-code language-js">if (persianRex.punctuation.test('!()[]،؟«»؛'))
+  doSomething();</code>
+
         <h2>Using has prefix</h2>
         <span>You can prefix any of the above methods with has.</span>
         <code class="demo-code language-js">if (persianRex.hasNumber.test('ابپ۱۲۳۴۵۶123abc'))
@@ -78,7 +91,9 @@
         <h2>Lower level usage</h2>
         <span>You can also get the ASCI code ranges for Persian numbers and Persian letters to make your custom RegExps.</span>
         <code class="demo-code language-js">var customLettersRegular = new RegExp('^' + persianRex.lettersASCIRange);
-var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);</code>
+  var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);
+  var customNumberRegular = new RegExp('^' + persianRex.rtlPunctuationsASCIRange);
+  var customNumberRegular = new RegExp('^' + persianRex.ltrPunctuationsASCIRange);</code>
         
         <h2>Sponsors</h2>
         <p>Many of the regular expressions in this project is extracted from larger projects such as <a href="http://themeyab.com/" target="_blank">Themeyab.com</a>, If you think I'm are missing an important regular expression, feel free to open an <a href="https://github.com/ImanMh/persianRex/issues">issue</a> on this repository and I will include it in the next version.</p>

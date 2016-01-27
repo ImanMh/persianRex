@@ -338,9 +338,13 @@ describe('Persian', function () {
   
   describe('raw punctuation ASCI ranges', function () {
     it('should be able to create custom RegExps', function () {
-      var customRex = new RegExp('^' + persianRex.punctuationsASCIRange);
+      var customRex = new RegExp('^' + persianRex.rtlPunctuationsASCIRange);
       assert.ok(customRex.test('؟۱۲۳123'));
       assert.notOk(customRex.test('123۱۲۳؟؟'));
+
+      var customRex2 = new RegExp('^' + persianRex.ltrPunctuationsASCIRange);
+      assert.ok(customRex2.test('.abc'));
+      assert.notOk(customRex2.test('؟.[a]'));
     });
   });
   

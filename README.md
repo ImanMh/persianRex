@@ -82,6 +82,8 @@ You can also get the ASCI code ranges for Persian numbers and Persian letters to
 ```js
   var customLettersRegular = new RegExp('^' + persianRex.lettersASCIRange);
   var customNumberRegular = new RegExp('^' + persianRex.numbersASCIRange);
+  var customNumberRegular = new RegExp('^' + persianRex.rtlPunctuationsASCIRange);
+  var customNumberRegular = new RegExp('^' + persianRex.ltrPunctuationsASCIRange);
 ```
 
 #Sponsors

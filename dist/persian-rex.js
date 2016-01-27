@@ -1,4 +1,4 @@
-/* persian-rex v2.0.0 by Iman Mohamadi <Iman@jsDecorator.com> (http://jsdecorator.com) */
+/* persian-rex v2.2.0 by Iman Mohamadi <Iman@jsDecorator.com> (http://jsdecorator.com) */
 
 (function () {
   persianRex = {};
@@ -30,7 +30,8 @@
   
   persianRex.numbersASCIRange = numberRange;
   persianRex.lettersASCIRange = charRange;
-  persianRex.punctuationsASCIRange = rtlPunctuations;
+  persianRex.rtlPunctuationsASCIRange = rtlPunctuations;
+  persianRex.ltrPunctuationsASCIRange = ltrPunctuations;
 
   function combineRegExps () {
 		var combined = '(';
@@ -60,7 +61,8 @@
     exports.hasText = persianRex.hasText;
     exports.lettersASCIRange = charRange;
     exports.numbersASCIRange = numberRange;
-    exports.punctuationsASCIRange = rtlPunctuations;
+    exports.rtlPunctuationsASCIRange = rtlPunctuations;
+    exports.ltrPunctuationsASCIRange = ltrPunctuations;
     exports.rtl = persianRex.rtl;
     exports.hasRtl = persianRex.hasRtl;
   } else {

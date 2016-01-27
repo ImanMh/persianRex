@@ -255,6 +255,11 @@ describe('Persian', function () {
       assert.ok(persianRex.text.test('۱ا'));
       assert.ok(persianRex.text.test('ا۱۲۱۲۲ب۳پ'));
       assert.ok(persianRex.text.test('ا۱؟؟۲۱۲۲ب۳پ'));
+    });
+    
+    it('should pass if Persian ltr punctuations are used', function () {
+      assert.ok(persianRex.text.test('!ا([])۱؟؟۲۱۲۲ب۳پ'));
+      assert.notOk(persianRex.text.test('!aaaaaا([])۱؟؟۲۱۲۲ب۳پ'));
     });    
         
     it('should not pass if contains no persian letter or number', function () {
@@ -310,6 +315,8 @@ describe('Persian', function () {
       assert.ok(persianRex.hasText.test('aاaاaاa'));
       assert.ok(persianRex.hasText.test('؟؟'));
       assert.ok(persianRex.hasText.test('a؟a؟a؟a'));
+      assert.ok(persianRex.hasText.test('(a)'));
+      assert.ok(persianRex.hasText.test('[a]'));
     });
   });
   

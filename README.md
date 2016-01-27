@@ -47,14 +47,24 @@ The ```letter``` RegExp will match any string that only contains Persian letters
 The ```text``` RegExp will match any string that only contains Persian letters, Persian numbers or Persian punctuations.
 ```js
  if (persianRex.text.test('ابپ۱؟ )()۲۳'))
-  makeInputsRTL();
+  doSomething();
+```
+
+###Detecting RTL characters
+From version 2 of this library, ```rtl``` RegExp is added to give you the ability to detect if tested string contains only rtl characters or not. rtl characters are Persian letters, Persian numbers and only the punctuations that are rtl (not [] or / that are also used in English). This is added so that you can be absolutely sure that you are dealing with a rtl text. Here is the example: 
+```js
+  if (persianRex.rtl.test('،'))
+  doSomething();
+    
+  if (persianRex.rtl.test('!'))
+    doSomething(); //this line will not be executed
 ```
 
 ###Punctuations
 Since version ```1.3.0``` punctuations are added to the library and they are combined with the ```text``` method to create a more natural detection of Persian text. It's rare that anybody wants to test a string against Persian punctuation but we decided to expose is for our users. Here is how to use it: 
 ```js
- if (persianRex.punctuation.test('،؟«»؛'))
-  makeInputsRTL();
+ if (persianRex.punctuation.test('!()[]،؟«»؛'))
+  doSomething();
 ```
 
 ###Using has prefix
@@ -62,7 +72,7 @@ You can prefix any of the above methods with has.
 
 ```js
  if (persianRex.hasNumber.test('ابپ۱۲۳۴۵۶123abc'))
-  makeInputsRTL();
+  doSomething();
 ```
 
 The if condition is true, because the string has a persian number in it. You can use ```hasLetter``` and ```hasText``` as well.

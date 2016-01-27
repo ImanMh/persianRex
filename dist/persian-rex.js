@@ -15,13 +15,17 @@
   persianRex.number = new RegExp('^' + numberRange + '+$');
   persianRex.letter = new RegExp('^' + charRange + '+$');
   persianRex.punctuation = new RegExp('^' + combineRegExps(rtlPunctuations, ltrPunctuations) + '+$');
-  persianRex.text = new RegExp('^' + combineRegExps(numberRange, charRange, rtlPunctuations) + '+$');
+  persianRex.text = new RegExp('^' + 
+    combineRegExps(numberRange, charRange, rtlPunctuations, ltrPunctuations) + '+$'
+  );
   persianRex.rtl = new RegExp('^' + combineRegExps(charRange, numberRange, rtlPunctuations) + '+$');
   
   persianRex.hasNumber = new RegExp(numberRange);
   persianRex.hasLetter = new RegExp(charRange);
   persianRex.hasPunctuation = new RegExp(combineRegExps(rtlPunctuations, ltrPunctuations));
-  persianRex.hasText = new RegExp(combineRegExps(numberRange, charRange, rtlPunctuations));
+  persianRex.hasText = new RegExp(
+    combineRegExps(numberRange, charRange, rtlPunctuations, ltrPunctuations)
+  );
   persianRex.hasRtl = new RegExp(combineRegExps(numberRange, charRange, rtlPunctuations));
   
   persianRex.numbersASCIRange = numberRange;

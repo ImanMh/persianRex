@@ -72,13 +72,30 @@ describe('RTL', function () {
       assert.ok(persianRex.rtl.test('؟'));
       assert.ok(persianRex.rtl.test('«'));
       assert.ok(persianRex.rtl.test('»'));
-      assert.ok(persianRex.rtl.test('؛'));        
+      assert.ok(persianRex.rtl.test('؛'));
+    });
+    
+    it('should not accept none rtl but persian punctuations rtl', function () {
+      assert.notOk(persianRex.rtl.test('('));
+      assert.notOk(persianRex.rtl.test(')'));
+      assert.notOk(persianRex.rtl.test('{'));
+      assert.notOk(persianRex.rtl.test('}'));
+      assert.notOk(persianRex.rtl.test('['));
+      assert.notOk(persianRex.rtl.test(']'));
+      assert.notOk(persianRex.rtl.test('!'));
     });
   });
   
   describe('mixture of letter number and rtl punctuations', function () {
     it('should consider the mixture as rtl', function () {
       assert.ok(persianRex.rtl.test('؛۹ی'));        
+    });
+  });
+  
+  describe('negative rtl function test', function () {
+    it('', function () {
+      assert.notOk(persianRex.rtl.test('[ا]'));
+      assert.notOk(persianRex.rtl.test('[۱]'));
     });
   });
   
@@ -96,6 +113,7 @@ describe('RTL', function () {
       assert.ok(persianRex.hasRtl.test('؛a'));
       assert.ok(persianRex.hasRtl.test('a؛۹ی'));        
     });
+    
   });
 });
 
@@ -191,20 +209,20 @@ describe('Persian', function () {
   
   describe('punctuation marks', function () {
       it('single punctuation marks', function () {
-        // assert.ok(persianRex.punctuation.test('.'));
+        assert.ok(persianRex.punctuation.test('.'));
         assert.ok(persianRex.punctuation.test('،'));
-        // assert.ok(persianRex.punctuation.test(':'));
+        assert.ok(persianRex.punctuation.test(':'));
         assert.ok(persianRex.punctuation.test('؟'));
-        // assert.ok(persianRex.punctuation.test('!'));
+        assert.ok(persianRex.punctuation.test('!'));
         assert.ok(persianRex.punctuation.test('«'));
         assert.ok(persianRex.punctuation.test('»'));
         assert.ok(persianRex.punctuation.test('؛'));
-        // assert.ok(persianRex.punctuation.test('-'));
-        // assert.ok(persianRex.punctuation.test('['));
-        // assert.ok(persianRex.punctuation.test(']'));
-        // assert.ok(persianRex.punctuation.test('('));
-        // assert.ok(persianRex.punctuation.test(')'));
-        // assert.ok(persianRex.punctuation.test('/'));
+        assert.ok(persianRex.punctuation.test('-'));
+        assert.ok(persianRex.punctuation.test('['));
+        assert.ok(persianRex.punctuation.test(']'));
+        assert.ok(persianRex.punctuation.test('('));
+        assert.ok(persianRex.punctuation.test(')'));
+        assert.ok(persianRex.punctuation.test('/'));
       });
 
       it('multi punctuation marks', function () {
@@ -271,6 +289,9 @@ describe('Persian', function () {
           assert.ok(persianRex.hasPunctuation.test('؟1'));
           assert.ok(persianRex.hasPunctuation.test('؟1'));
           assert.ok(persianRex.hasPunctuation.test('شسی؟بلا'));
+          assert.ok(persianRex.hasPunctuation.test('شس!بلا'));
+          assert.ok(persianRex.hasPunctuation.test('[!]'));
+          assert.ok(persianRex.hasPunctuation.test('(a)'));
       });
   });
   

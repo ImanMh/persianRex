@@ -7,17 +7,18 @@
 				'\u063A\u064A\u064B\u064C\u064D\u064E',
 				'\u064F\u067E\u0670\u0686\u0698\u200C',
 				'\u0621-\u0629\u0630-\u0639\u0641-\u0654]'].join(),
-      rtlPunctuations = '(،|؟|«|»|؛)';
+      rtlPunctuations = '(،|؟|«|»|؛)',
+      ltrPunctuations = '(\\.|:|\\!|\\-|\\[|\\]|\\(|\\)|/)';
   
   persianRex.number = new RegExp('^' + numberRange + '+$');
   persianRex.letter = new RegExp('^' + charRange + '+$');
-  persianRex.punctuation = new RegExp('^' + rtlPunctuations + '+$');
+  persianRex.punctuation = new RegExp('^' + combineRegExps(rtlPunctuations, ltrPunctuations) + '+$');
   persianRex.text = new RegExp('^' + combineRegExps(numberRange, charRange, rtlPunctuations) + '+$');
   persianRex.rtl = new RegExp('^' + combineRegExps(charRange, numberRange, rtlPunctuations) + '+$');
   
   persianRex.hasNumber = new RegExp(numberRange);
   persianRex.hasLetter = new RegExp(charRange);
-  persianRex.hasPunctuation = new RegExp(rtlPunctuations);
+  persianRex.hasPunctuation = new RegExp(combineRegExps(rtlPunctuations, ltrPunctuations));
   persianRex.hasText = new RegExp(combineRegExps(numberRange, charRange, rtlPunctuations));
   persianRex.hasRtl = new RegExp(combineRegExps(numberRange, charRange, rtlPunctuations));
   

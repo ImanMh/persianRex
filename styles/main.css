@@ -1,16 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
-
-@font-face {
-  font-family: 'Cutive Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Cutive Mono'), local('CutiveMono-Regular'), url(https://fonts.gstatic.com/s/cutivemono/v4/N5odNRruTwjvCM8y77PhQYgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
-}
-
-body { 
-	font: 400 16px/1.5 "Cutive Mono", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif; 
-	color: #111; 
-	background-color: #fff; 
+body {
+	font: 400 16px/1.5 "Open Sans", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif;
+	color: #111;
+	background-color: #fff;
 	padding-bottom: 100px;
 }
 
@@ -27,16 +18,34 @@ code {
   overflow: auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #292929;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 50px;
+}
+
+h1:first-child, h2:first-child, h3:first-child {
+  margin-top: 10px;
+}
+
+p, span, strong, em {
+  color: #333;
+}
+
 .banner {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 3px solid #E85151;
 	margin-bottom: 100px;
 	min-height: 500px;
   background-color: #A83733;
-	background-image: url("../imgs/carpet-dim.jpg");
+	background-image:
+    radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.51) 94%,rgba(0,0,0,0.4) 100%),
+    url("../imgs/carpet-dim.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -47,19 +56,18 @@ code {
 }
 
 .banner-content {
-  max-width: 90%;  
+  max-width: 90%;
 }
 
 .text-strong  h1 {
-	color: #fff;
+	color: rgb(247, 183, 181);
   font-size: 6em;
   font-family: "Times New Roman";
-  text-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+  text-shadow: 0px 0px 20px rgba(0,0,0,0.6);
 }
 
 .text-strong i {
-	color: #fff;
-  text-shadow: 0px 0px 25px #000;
+	color: #FF9E9B;
 }
 
 .tester {
@@ -106,7 +114,7 @@ code {
 }
 
 .en {
-  font: 600 16px/1.5 "Cutive Mono", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif; 
+  font: 400 16px/1.5 "Open Sans", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif;
 }
 
 /*Prism overwrites*/

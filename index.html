@@ -31,17 +31,22 @@
 شما مختارید که از این کتابخانه به هر شکلی که دوست دارید استفاده کنید و هر شکلی خواستید کد های این کتابخانه رو به فروش برسونید.
     </p>
 
-    <h2>Start typing only Persian chars:</h2>
+    <h2>A simple playground:</h2>
     <div class="row">
-      <div class="col-md-12">
-        <textarea id="tester" class="tester" name="farsi-detector" placeholder="حروف فارسی را در این جا تست کنید..."></textarea>
+      <div class="col-md-6 col-sm-12">
+        <textarea id="tester-persian" class="tester" name="farsi-detector" placeholder="حروف مجاز در فارسی را در این جا تست کنید..."></textarea>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <textarea id="tester-rtl" class="tester" name="farsi-detector" placeholder="حروف راست چین را در این جا تست کنید..."></textarea>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12">
-        <p class="test">When you start typing, if all the letters and numbres are in Persian, the box background turn to green. As soon as you type the first none Persian character it will turn red. If you found a Persian letter that the box above can not recognize, please feel free to open up an issue on our <a href="https://github.com/ImanMh/persianRex/issues">repository</a>.</p>
-
+        <p class="test">
+          The first box (left side), will detect all the characters that are allowed in Persian. The other box detects the characters that are only used in rtl languages. For instance this characters <code>[]</code> are allowed in Persian but they are not rtl characters, they are also used in languages like English. 
+          If you found any character that the boxes above can not recognize, please feel free to open up an issue on our <a href="https://github.com/ImanMh/persianRex/issues">repository</a>.
+        </p>  
         <h2>Getting started</h2>
         <p>You can download the latest release from the <a href="https://github.com/ImanMh/persianRex/releases">releases</a> page or use your preferred package manager.</p>
         <strong>via npm:</strong><br>

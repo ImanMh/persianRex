@@ -1,5 +1,5 @@
 (function () {
-  persianRex = {};
+  var persianRex = {};
   
   var numberRange = '[\u06F0-\u06F9]',
       charRange = ['[\\s,\u06A9\u06AF\u06C0\u06CC\u060C',

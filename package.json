@@ -1,6 +1,6 @@
 {
   "name": "persian-rex",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A collection of useful Persian / Farsi regular expressions",
   "main": "dist/persianRegs.js",
   "scripts": {

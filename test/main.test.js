@@ -1,3 +1,7 @@
+var persianAlphabet = ['ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س',
+  'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی'],
+  persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+
 describe('Test ENV', function () {
   describe('check test suite is working', function () {
     it ('should pass anyway', function (done) {
@@ -17,52 +21,17 @@ describe('RTL', function () {
 
   describe('letters', function () {
     it('should consider all Persian letters rtl', function () {
-      assert.ok(persianRex.letter.test('ا'));
-      assert.ok(persianRex.letter.test('ب'));
-      assert.ok(persianRex.letter.test('پ'));
-      assert.ok(persianRex.letter.test('ت'));
-      assert.ok(persianRex.letter.test('ث'));
-      assert.ok(persianRex.letter.test('ج'));
-      assert.ok(persianRex.letter.test('چ'));
-      assert.ok(persianRex.letter.test('ح'));
-      assert.ok(persianRex.letter.test('خ'));
-      assert.ok(persianRex.letter.test('د'));
-      assert.ok(persianRex.letter.test('ذ'));
-      assert.ok(persianRex.letter.test('ر'));
-      assert.ok(persianRex.letter.test('ز'));
-      assert.ok(persianRex.letter.test('س'));
-      assert.ok(persianRex.letter.test('ش'));
-      assert.ok(persianRex.letter.test('ص'));
-      assert.ok(persianRex.letter.test('ض'));
-      assert.ok(persianRex.letter.test('ط'));
-      assert.ok(persianRex.letter.test('ظ'));
-      assert.ok(persianRex.letter.test('ع'));
-      assert.ok(persianRex.letter.test('غ'));
-      assert.ok(persianRex.letter.test('ف'));
-      assert.ok(persianRex.letter.test('ق'));
-      assert.ok(persianRex.letter.test('ک'));
-      assert.ok(persianRex.letter.test('گ'));
-      assert.ok(persianRex.letter.test('ل'));
-      assert.ok(persianRex.letter.test('م'));
-      assert.ok(persianRex.letter.test('ن'));
-      assert.ok(persianRex.letter.test('و'));
-      assert.ok(persianRex.letter.test('ه'));
-      assert.ok(persianRex.letter.test('ی'));
+      persianAlphabet.forEach(function (letter) {
+        assert.ok(persianRex.letter.test(letter));
+      });
     });
   });
 
   describe('numbers', function () {
     it('should consider all Persian numbers rtl', function () {
-      assert.ok(persianRex.rtl.test('۰'));
-      assert.ok(persianRex.rtl.test('۱'));
-      assert.ok(persianRex.rtl.test('۲'));
-      assert.ok(persianRex.rtl.test('۳'));
-      assert.ok(persianRex.rtl.test('۴'));
-      assert.ok(persianRex.rtl.test('۵'));
-      assert.ok(persianRex.rtl.test('۶'));
-      assert.ok(persianRex.rtl.test('۷'));
-      assert.ok(persianRex.rtl.test('۸'));
-      assert.ok(persianRex.rtl.test('۹'));
+      persianNumbers.forEach(function(number) {
+        assert.ok(persianRex.rtl.test(number));
+      });
     });
   });
   
@@ -122,16 +91,9 @@ describe('Persian', function () {
   
   describe('number', function () {
     it('single digit numbers', function () {
-      assert.ok(persianRex.number.test('۰'));
-      assert.ok(persianRex.number.test('۱'));
-      assert.ok(persianRex.number.test('۲'));
-      assert.ok(persianRex.number.test('۳'));
-      assert.ok(persianRex.number.test('۴'));
-      assert.ok(persianRex.number.test('۵'));
-      assert.ok(persianRex.number.test('۶'));
-      assert.ok(persianRex.number.test('۷'));
-      assert.ok(persianRex.number.test('۸'));
-      assert.ok(persianRex.number.test('۹'));
+      persianNumbers.forEach(function(number) {
+        assert.ok(persianRex.number.test(number));
+      });
     });
     
     it('multi digit numbers', function () {
@@ -157,37 +119,9 @@ describe('Persian', function () {
   
   describe('letter', function () {
     it('single leters', function () {
-      assert.ok(persianRex.letter.test('ا'));
-      assert.ok(persianRex.letter.test('ب'));
-      assert.ok(persianRex.letter.test('پ'));
-      assert.ok(persianRex.letter.test('ت'));
-      assert.ok(persianRex.letter.test('ث'));
-      assert.ok(persianRex.letter.test('ج'));
-      assert.ok(persianRex.letter.test('چ'));
-      assert.ok(persianRex.letter.test('ح'));
-      assert.ok(persianRex.letter.test('خ'));
-      assert.ok(persianRex.letter.test('د'));
-      assert.ok(persianRex.letter.test('ذ'));
-      assert.ok(persianRex.letter.test('ر'));
-      assert.ok(persianRex.letter.test('ز'));
-      assert.ok(persianRex.letter.test('س'));
-      assert.ok(persianRex.letter.test('ش'));
-      assert.ok(persianRex.letter.test('ص'));
-      assert.ok(persianRex.letter.test('ض'));
-      assert.ok(persianRex.letter.test('ط'));
-      assert.ok(persianRex.letter.test('ظ'));
-      assert.ok(persianRex.letter.test('ع'));
-      assert.ok(persianRex.letter.test('غ'));
-      assert.ok(persianRex.letter.test('ف'));
-      assert.ok(persianRex.letter.test('ق'));
-      assert.ok(persianRex.letter.test('ک'));
-      assert.ok(persianRex.letter.test('گ'));
-      assert.ok(persianRex.letter.test('ل'));
-      assert.ok(persianRex.letter.test('م'));
-      assert.ok(persianRex.letter.test('ن'));
-      assert.ok(persianRex.letter.test('و'));
-      assert.ok(persianRex.letter.test('ه'));
-      assert.ok(persianRex.letter.test('ی'));
+      persianAlphabet.forEach(function (letter) {
+        assert.ok(persianRex.letter.test(letter));
+      });
     });
     
     it('multi leters', function () {

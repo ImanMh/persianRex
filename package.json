@@ -2,7 +2,7 @@
   "name": "persian-rex",
   "version": "2.2.2",
   "description": "A collection of useful Persian / Farsi regular expressions",
-  "main": "dist/persianRegs.js",
+  "main": "dist/persian-rex.js",
   "scripts": {
     "test": "testem ci --launch node,PhantomJS"
   },

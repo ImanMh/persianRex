@@ -71,6 +71,10 @@ describe('RTL', function () {
   
   describe('hasRtl', function () {
     it('should consider rtl if a only rtl chars are passed', function () {
+      assert.notOk(persianRex.hasRtl.test('ASCII text with spaces'))
+      assert.notOk(persianRex.hasRtl.test('ASCII text with comma, in it'))
+      assert.ok(persianRex.hasRtl.test('متن ساده همراه با ASCII'))
+      assert.ok(persianRex.hasRtl.test('متن با کاراکتر‌های چپ‌چین'))
       assert.ok(persianRex.hasRtl.test('ی'));
       assert.ok(persianRex.hasRtl.test('۹'));
       assert.ok(persianRex.hasRtl.test('؛'));
